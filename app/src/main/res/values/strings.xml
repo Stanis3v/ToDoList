@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tasks List</string>
+    <string name="setting">Setting</string>
+    <string name="about">About</string>
+</resources>
