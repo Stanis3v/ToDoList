@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="setting">Setting</string>
+    <string name="enable_dark_mode">Enable Dark Mode</string>
+    <string name="dark_mode">Dark Mode</string>
 </resources>

@@ -2,4 +2,6 @@
     <string name="app_name">Tasks List</string>
     <string name="setting">Setting</string>
     <string name="about">About</string>
+    <string name="enable_dark_mode">Enable Dark Mode</string>
+    <string name="dark_mode">Dark Mode</string>
 </resources>
