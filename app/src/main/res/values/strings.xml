@@ -4,4 +4,13 @@
     <string name="about">About</string>
     <string name="enable_dark_mode">Enable Dark Mode</string>
     <string name="dark_mode">Dark Mode</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="notification">Notification</string>
+    <string name="date">Date</string>
+    <string name="dotDot">:</string>
+    <string name="hour">Hour</string>
+    <string name="remind_me">Remind Me</string>
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
 </resources>
