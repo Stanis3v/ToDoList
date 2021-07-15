@@ -13,4 +13,7 @@
     <string name="remind_me">Remind Me</string>
     <string name="apply">Apply</string>
     <string name="cancel">Cancel</string>
+    <string name="app_todolist">App: ToDoList</string>
+    <string name="version_1_1">Version 1.1</string>
+    <string name="remind">Remind</string>
 </resources>
