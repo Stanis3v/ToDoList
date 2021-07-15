@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tasks List</string>
+    <string name="app_name">ToDoList</string>
     <string name="setting">Setting</string>
     <string name="about">About</string>
     <string name="enable_dark_mode">Enable Dark Mode</string>
