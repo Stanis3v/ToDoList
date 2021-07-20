@@ -24,39 +24,46 @@ public class ToDoAdapter extends BaseAdapter {
         this.toDoList = toDoList;
     }
 
-        @Override
-        public int getCount() {
-            return toDoList.size();
+    @Override
+    public int getCount() {
+        return toDoList.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return null;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    private class ViewHolder {
+        TextView txtTitle, txtDes, txtRemind;
+        ImageButton btnDone;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder;
+        if (convertView == null) {
+            holder = new ViewHolder();
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(layout, null);
+
+            holder.txtTitle = (TextView) convertView.findViewById(R.id.textTitle);
+            holder.txtDes = (TextView) convertView.findViewById(R.id.textDescription);
+            holder.txtRemind = (TextView) convertView.findViewById(R.id.txtRemind);
+            holder.btnDone = (ImageButton) convertView.findViewById(R.id.done);
+
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
 
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        private class ViewHolder{
-            TextView txtTitle,txtDes,txtRemind;
-            ImageButton btnDone;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder holder;
-            if(convertView==null){
-                holder=new ViewHolder();
-                LayoutInflater inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView=inflater.inflate(layout, null);
-
-                holder.txtTitle=(TextView) convertView.findViewById(R.id.textTitle);
-                holder.txtDes=(TextView) convertView.findViewById(R.id.textDescription);
-                holder.txtRemind=(TextView) convertView.findViewById(R.id.)
-
-            }
-        }
 
     }
+}
+
+
