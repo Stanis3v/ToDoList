@@ -54,7 +54,7 @@ public class ToDoAdapter extends BaseAdapter {
 
             holder.txtTitle = (TextView) convertView.findViewById(R.id.textTitle);
             holder.txtDes = (TextView) convertView.findViewById(R.id.textDescription);
-            holder.txtRemind = (TextView) convertView.findViewById(R.id.txtRemind);
+            holder.txtRemind = (TextView) convertView.findViewById(R.id.textRemind);
             holder.btnDone = (ImageButton) convertView.findViewById(R.id.done);
 
             convertView.setTag(holder);
@@ -62,8 +62,19 @@ public class ToDoAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
+        final ToDo toDo=toDoList.get(position);
 
+        holder.txtTitle.setText(toDo.getTitle());
+        holder.txtDes.setText(toDo.getDes());
+        holder.txtRemind.setText(toDo.getRemind());
+
+        holder.btnDone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.ShowDialogDone(toDo.getId());
+            }
+        });
+
+        return convertView;
     }
 }
-
-

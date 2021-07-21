@@ -1,4 +1,13 @@
 package stanis3v.lab.todolist.Setting;
 
-public class SettingActivity {
+import android.widget.Switch;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SettingActivity extends AppCompatActivity {
+
+    Switch darkSwitch;
+
+//
+    //
 }

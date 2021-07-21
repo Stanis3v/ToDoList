@@ -2,7 +2,6 @@ package stanis3v.lab.todolist;
 
 import android.os.Bundle;
 import android.widget.ListView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
