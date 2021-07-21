@@ -8,5 +8,6 @@ public class SettingActivity extends AppCompatActivity {
 
     Switch darkSwitch;
 
-
+//
+    //
 }
