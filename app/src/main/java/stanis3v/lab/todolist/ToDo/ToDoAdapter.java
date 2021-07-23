@@ -14,11 +14,11 @@ import stanis3v.lab.todolist.MainActivity;
 
 public class ToDoAdapter extends BaseAdapter {
 
-    private MainActivity context;
-    private int layout;
-    private List<ToDo> toDoList;
+    private final MainActivity context;
+    private final int layout;
+    private final List<ToDo> toDoList;
 
-    public ToDoAdapter(MainActivity context, int layout, List<ToDo> toDoLIst) {
+    public ToDoAdapter(MainActivity context, int layout, List<ToDo> toDoList) {
         this.context = context;
         this.layout = layout;
         this.toDoList = toDoList;
@@ -39,7 +39,7 @@ public class ToDoAdapter extends BaseAdapter {
         return 0;
     }
 
-    private class ViewHolder {
+    private static class ViewHolder {
         TextView txtTitle, txtDes, txtRemind;
         ImageButton btnDone;
     }
@@ -52,10 +52,10 @@ public class ToDoAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(layout, null);
 
-            holder.txtTitle = (TextView) convertView.findViewById(R.id.textTitle);
-            holder.txtDes = (TextView) convertView.findViewById(R.id.textDescription);
-            holder.txtRemind = (TextView) convertView.findViewById(R.id.textRemind);
-            holder.btnDone = (ImageButton) convertView.findViewById(R.id.done);
+            holder.txtTitle = convertView.findViewById(R.id.textTitle);
+            holder.txtDes = convertView.findViewById(R.id.textDescription);
+            holder.txtRemind = convertView.findViewById(R.id.textRemind);
+            holder.btnDone = convertView.findViewById(R.id.done);
 
             convertView.setTag(holder);
         } else {
@@ -68,12 +68,7 @@ public class ToDoAdapter extends BaseAdapter {
         holder.txtDes.setText(toDo.getDes());
         holder.txtRemind.setText(toDo.getRemind());
 
-        holder.btnDone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                context.ShowDialogDone(toDo.getId());
-            }
-        });
+        holder.btnDone.setOnClickListener(v -> context.ShowDialogDone(toDo.getId()));
 
         return convertView;
     }
